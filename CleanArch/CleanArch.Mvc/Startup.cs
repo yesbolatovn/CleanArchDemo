@@ -1,3 +1,4 @@
+using CleanArch.Api.Configurations;
 using CleanArch.Infra.Data.Context;
 using CleanArch.Infra.IoC;
 using CleanArch.Mvc.Data;
@@ -44,6 +45,8 @@ namespace CleanArch.Mvc
             services.AddRazorPages();
 
             services.AddMediatR(typeof(Startup));
+
+            services.RegisterAutoMapper();
 
             RegisterServices(services);
         }
